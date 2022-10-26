@@ -1,0 +1,16 @@
+/*CREATE TABLE IF NOT EXISTS users (
+  user_id INTEGER PRIMARY KEY,
+  name	TEXT NOT NULL,
+  score   INTEGER DEFAULT 0
+)
+*/
+
+CREATE TABLE IF NOT EXISTS users (
+  user_id INTEGER PRIMARY KEY,
+  name	TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  passw TEXT NOT NULL,
+  role TEXT,
+  badges INTEGER DEFAULT 0,
+  visible BOOLEAN DEFAULT TRUE
+)
