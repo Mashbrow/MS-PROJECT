@@ -16,7 +16,6 @@ export const register = ( app: express.Application ) => {
     else {
       res.status(200).json(UserController.listUsers())
     }
-
   })
  
   //app.post('/user', (req, res) => {

@@ -4,11 +4,11 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc",
+    "prebuild": "rm -rf dist/*",
+    "build": "tsc && cp -rf package.json dist/package.json",
     "prestart": "npm run build",
     "start": "ts-node ."
-  },
+ },
   "keywords": [],
   "author": "",
   "license": "ISC",

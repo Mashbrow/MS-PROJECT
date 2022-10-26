@@ -8,7 +8,9 @@ export default class UserRepository {
 
   constructor() {
     this.db = new Database('db/users.db', { verbose: console.log });
-    this.applyMigrations()    
+    this.applyMigrations()
+    const init_statement = this.db.prepare("INSERT INTO users (name, email, passw, role) VALUES (?, ?, ?, ?)")
+    init_statement.run("admin","admin","admin","admin")
   }
 
   //Table creation

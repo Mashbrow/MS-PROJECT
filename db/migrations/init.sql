@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS users (
   role TEXT,
   badges INTEGER DEFAULT 0,
   visible BOOLEAN DEFAULT TRUE
-)
+);
